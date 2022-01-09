@@ -1,0 +1,260 @@
+$dark: #363537; // Change this line to change the color of the dark mode
+
+// Some colors you can choose from:
+$darker: #22262a;
+$red: #F03A47;
+$blue: #009dd5;
+$yellow: #FFFB46;
+$turquoise: #55d6c2;
+$green: #5BBA6F;
+$unimportant: #acacac;
+$darkyellow: #858500;
+
+
+
+
+// Code below
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+                                            ██                                          
+                                          ██░░██                                        
+                                        ██░░░░░░██                     
+                                      ██░░░░░░░░░░██                                    
+                                      ██░░░░░░░░░░██                                    
+                                    ██░░░░░░░░░░░░░░██                                  
+                                  ██░░░░░░██████░░░░░░██                                
+                                  ██░░░░░░██████░░░░░░██                                
+                                ██░░░░░░░░██████░░░░░░░░██                              
+                                ██░░░░░░░░██████░░░░░░░░██                              
+                              ██░░░░░░░░░░██████░░░░░░░░░░██                            
+                            ██░░░░░░░░░░░░██████░░░░░░░░░░░░██                          
+                            ██░░░░░░░░░░░░██████░░░░░░░░░░░░██                          
+                          ██░░░░░░░░░░░░░░██████░░░░░░░░░░░░░░██                        
+                          ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██                        
+                        ██░░░░░░░░░░░░░░░░██████░░░░░░░░░░░░░░░░██                      
+                        ██░░░░░░░░░░░░░░░░██████░░░░░░░░░░░░░░░░██                      
+                      ██░░░░░░░░░░░░░░░░░░██████░░░░░░░░░░░░░░░░░░██                    
+                      ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██                    
+                        ██████████████████████████████████████████                      
+
+
+               WARNING! THE CODE YOU ARE ABOUT TO LOOK AT MAY GIVE EYE CANCER!
+                                  PROCEED WITH CAUTION!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+I warned you!
+*/
+
+
+.userTopDiv,
+.userRozvrh,
+.user-novyPrvok,
+.userHomeOther,
+.hwHeroDiv {
+    background-color: darken($dark, 10) !important;
+    box-shadow: none;
+}
+
+body,
+html,
+.userContentInner,
+.bgDiv,
+#jw4298a4ab_md,
+.edubarSidebar,
+.usercalendarTitle > h1,
+.zsvFilterElem,
+.zsvHeaderTitle,
+.zsvHeaderTabs,
+.diplomy-st-contet-outer,
+.print-nobreak,
+#fitheight > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(1) > div > div,
+#fitheight > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(1) > div > div > div,
+#fitheight > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div,
+#fitheight > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1),
+#fitheight > div:nth-child(1) > span,
+#fitheight > div:nth-child(1),
+#fitheight,
+#fitheight > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(1),
+#fitheight > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(3) > div:nth-child(1),
+#fitheight > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(5) > div:nth-child(1),
+#fitheight > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(7) > div:nth-child(1),
+#fitheight > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(9) > div:nth-child(1),
+#fitheight > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(11) > div:nth-child(1),
+#fitheight > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(13) > div:nth-child(1) {
+    background-color: $dark !important;
+    color: white !important;
+}
+
+.edubarSmartLink span,
+.edubarMenuitem a span,
+.ribbon-button span,
+.hwWeekItem,
+.zsvHeaderTitle > h1,
+td > span > span,
+td > a,
+td > div > a,
+.expandMonthBtn {
+    color: white !important;
+}
+
+.edubarSmartLink:hover,
+.edubarMenuitem.active a,
+.edubarMenuitem a:hover,
+.edubarMenulist a:hover,
+.hwmenuElem .selected,
+.hwWeekItem,
+#fitheight > div:nth-child(2) > div:nth-child(3) > div:nth-child(1),
+#fitheight > div:nth-child(2) > div:nth-child(3) {
+    background-color: darken($dark, 5) !important;
+}
+
+.hwLoadMoreDiv {
+    opacity: 1 !important;
+}
+
+.userButton,
+.edubarMenulist,
+.calendar > div,
+.hwmenuElem,
+.ribbon-section,
+.toolbarForm,
+.hwDate,
+.hwItem,
+.hwLoadMoreDiv,
+.hwListElem,
+.hwsideElem,
+.ui-datepicker-header,
+.hwMainListMain {
+    background-color: darken($dark, 2) !important;
+    color: white !important;
+}
+
+.hwItem {
+    margin: 0 !important;
+}
+
+.callout {
+    display: none;
+}
+
+.edubarSidebar .edubarMenulist {
+    background-color: $dark !important;
+}
+
+.userButtonLast {
+    background-color: darken($dark, 1) !important;
+    color: white;
+}
+
+ul.edubarMenulist.level0 > li:hover > a,
+ul.edubarMenulist.level0 > li.v2:hover > a {
+    background-color: darken($dark, 5) !important;
+}
+
+th,
+.fixedCell,
+td {
+    background-color: darken($dark, 5) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.header th {
+    background-color: darken($dark, 7) !important;
+}
+
+#fitheight > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > div::after {
+    content: "dark mode v0.1 beta";
+}
