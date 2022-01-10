@@ -142,9 +142,21 @@ I warned you!
 .userRozvrh,
 .user-novyPrvok,
 .userHomeOther,
-.hwHeroDiv {
+.hwHeroDiv,
+.skgdFixedHeader,
+#skin_Div_10,
+#skin_Div_11,
+.messageViewerHeader,
+div.messageViewerReplies.messageViewerReplies1.messageViewerReplyText > form > div > div > textarea,
+.ui-dialog-titlebar {
     background-color: darken($dark, 10) !important;
     box-shadow: none;
+}
+
+div.messageViewerReplies.messageViewerReplies1.messageViewerReplyText > form > div > div > textarea {
+    outline: none;
+    caret-color: white;
+    color: white;
 }
 
 body,
@@ -185,7 +197,9 @@ html,
 td > span > span,
 td > a,
 td > div > a,
-.expandMonthBtn {
+.expandMonthBtn,
+#home_Heading_2,
+.messageViewerConfirmationItem {
     color: white !important;
 }
 
@@ -196,7 +210,8 @@ td > div > a,
 .hwmenuElem .selected,
 .hwWeekItem,
 #fitheight > div:nth-child(2) > div:nth-child(3) > div:nth-child(1),
-#fitheight > div:nth-child(2) > div:nth-child(3) {
+#fitheight > div:nth-child(2) > div:nth-child(3),
+.messageViewerReplyText {
     background-color: darken($dark, 5) !important;
 }
 
@@ -221,6 +236,11 @@ td > div > a,
     color: white !important;
 }
 
+.messageReplies,
+.mvtMainScroller {
+    background-color: darken($dark, 2) !important;
+}
+
 .hwItem {
     margin: 0 !important;
 }
@@ -241,6 +261,16 @@ td > div > a,
 ul.edubarMenulist.level0 > li:hover > a,
 ul.edubarMenulist.level0 > li.v2:hover > a {
     background-color: darken($dark, 5) !important;
+}
+
+.messageViewerUser,
+.messageViewerText,
+.messageViewerClosePart,
+.tml-replies-actions,
+.messageRepliesTitle,
+#dlg2 {
+    background-color: darken($dark, 5) !important;
+    color: white !important;
 }
 
 th,
