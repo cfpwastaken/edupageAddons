@@ -34,15 +34,16 @@ log("Loading...");
 
 function isEnabled(addon) {
 	var promise = new Promise(function(resolve, reject) {
-		chrome.storage.sync.get(addon, (v) => {
-			if(debug) log(v);
-			if(debug) log(v[addon]);
-			if(v[addon] == true) {
-				resolve(true);
-			} else {
-				resolve(false);
-			}
-		});
+		// chrome.storage.sync.get(addon, (v) => {
+		// 	if(debug) log(v);
+		// 	if(debug) log(v[addon]);
+		// 	if(v[addon] == true) {
+		// 		resolve(true);
+		// 	} else {
+		// 		resolve(false);
+		// 	}
+		// });
+		resolve(true);
 	});
 	return promise;
 }

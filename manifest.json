@@ -1,16 +1,14 @@
 {
   "name": "Edupage Addons",
   "version": "0.0.1",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "description": "whatever the description was",
-  "permissions": [
-    "storage"
-  ],
   "background": {
-    "service_worker": "src/background.js"
+    "scripts": [
+      "src/background.js"
+    ]
   },
   "default_locale": "en",
-  "options_page": "src/options/options.html",
   "content_scripts": [
     {
       "matches": [
@@ -18,19 +16,10 @@
       ],
       "js": [
         "src/inject/inject.js"
-      ],
-      "run_at": "document_start"
+      ]
     }
   ],
-  "options_ui": {
-    "page": "src/options/options.html",
-    "open_in_tab": true
-  },
-  "action": {
-    "default_popup": "src/popup/popup.html"
-  },
-  "web_accessible_resources": [{
-    "resources": ["src/injs/*"],
-    "matches": ["<all_urls>"]
-  }]
+  "web_accessible_resources": [
+    "src/injs/*"
+  ]
 }
