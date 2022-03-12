@@ -19,7 +19,16 @@
       ]
     }
   ],
+  "options_ui": {
+    "page": "options/options.html"
+  },
+  "permissions": ["storage"],
   "web_accessible_resources": [
     "src/injs/*"
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "cfp@cfp.gotdns.ch"
+    }
+  }
 }
