@@ -33,6 +33,12 @@ function save(e) {
 
 async function load() {
   await inputLoad("darkmode");
+  await inputLoad("nocallout");
+  await inputLoad("nostart");
+  await inputLoad("nohelp");
+  await inputLoad("eqadecode");
+  await inputLoad("keycombo");
+  await inputLoad("markdown");
 }
 
 load();
