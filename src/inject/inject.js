@@ -86,7 +86,7 @@ cssInject("nohelp", `
 	display: none !important;
 }
 `, "No Help");
-jsInject("eqaDecode", "eqadecode.js", "EQA Decode");
+jsInject("eqadecode", "eqadecode.js", "EQA Decode");
 jsInject("keycombo", "keycombo.js", "Key combo");
 jsInject("markdown", "md.js", "Markdown");
 cssInject("markdown", `
