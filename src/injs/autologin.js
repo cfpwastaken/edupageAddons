@@ -16,10 +16,12 @@ async function getValue(k) {
   const submitField = document.querySelector(".skgdFormSubmit");
   console.log("A");
   if(userField) {
-    console.log("B");
-    userField.value = await getValue("autologin_username");
-    passField.value = await getValue("autologin_password");
-    submitField.click();
-    console.log("B");
+    if(location.host == await getValue("autologin_host") + ".edupage.org") {
+      console.log("B");
+      userField.value = await getValue("autologin_username");
+      passField.value = await getValue("autologin_password");
+      submitField.click();
+      console.log("B");
+    }
   }
 })();
