@@ -32,20 +32,12 @@ function log(str) {
 
 log("Loading...");
 
-function isEnabled(addon) {
-	var promise = new Promise(function(resolve, reject) {
-		// chrome.storage.sync.get(addon, (v) => {
-		// 	if(debug) log(v);
-		// 	if(debug) log(v[addon]);
-		// 	if(v[addon] == true) {
-		// 		resolve(true);
-		// 	} else {
-		// 		resolve(false);
-		// 	}
-		// });
-		resolve(true);
-	});
-	return promise;
+async function getValue(k) {
+  return (await browser.storage.sync.get(k))[k];
+}
+
+async function isEnabled(addon) {
+	return (await getValue(addon)) == true;
 }
 
 async function cssInject(addon, css, name) {
@@ -69,28 +61,28 @@ async function jsInject(addon, js, name) {
 	}
 }
 
-cssInjectFile("general.darkmode", "darkmode.css", "Dark mode");
-cssInject("remove.callout", `
+cssInjectFile("darkmode", "darkmode.css", "Dark mode");
+cssInject("nocallout", `
 .callout,
 .hwMenuListItemArr {
 	display: none !important;
 }
 `, "No callout");
-cssInject("remove.startbutton", `
+cssInject("nostart", `
 #edubarStartButton {
 	visibility: hidden;
 }
 `, "No start button");
-cssInject("remove.help", `
+cssInject("nohelp", `
 .learnMoreBtn,
 #edubarHelpMenuBtn {
 	display: none !important;
 }
 `, "No Help");
-jsInject("util.eqaDecode", "eqadecode.js", "EQA Decode");
-jsInject("general.keycombo", "keycombo.js", "Key combo");
-jsInject("general.markdown", "md.js", "Markdown");
-cssInject("general.markdown", `
+jsInject("eqaDecode", "eqadecode.js", "EQA Decode");
+jsInject("keycombo", "keycombo.js", "Key combo");
+jsInject("markdown", "md.js", "Markdown");
+cssInject("markdown", `
 blockquote, blockquote > *:not(a) { color: black }
 
 blockquote { background: #fed; margin: 1em 0; padding: 8px; border-left: 2px solid #cba }
@@ -100,7 +92,7 @@ pre {
 }
 `, "Markdown CSS");
 
-cssInject("general.markdown", `
+cssInject("markdown", `
 .tt-cell {
 	animation: fadein 0.5s;
 }

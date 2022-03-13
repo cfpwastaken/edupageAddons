@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+  background-color: #1D1D1D;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/*put all checkboxes to the other side*/
+input[type="checkbox"] {
+  /* float: right; */
+  transform: scale(1.5);
+  margin-right: 5px;
+
+}

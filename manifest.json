@@ -2,7 +2,7 @@
   "name": "Edupage Addons",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "whatever the description was",
+  "description": "Enhance your Edupage experience",
   "background": {
     "scripts": [
       "src/background.js"
@@ -19,7 +19,16 @@
       ]
     }
   ],
+  "permissions": ["storage"],
   "web_accessible_resources": [
     "src/injs/*"
-  ]
+  ],
+  "browser_action": {
+    "default_popup": "src/popup/popup.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "cfp@cfp.gotdns.ch"
+    }
+  }
 }
