@@ -1,31 +1,11 @@
-// Update Interval variable of every 10 minutes
-var updateInterval = 10 * 60 * 1000;
-
-var currentVersion = chrome.runtime.getManifest().version;
-
-function update() {
-    fetch("https://cfp.gotdns.ch/update/edupageaddons?ver=" + currentVersion).then(res => res.text()).then(res => {
-        console.log(res);
-        if(res != "false") {
-            chrome.storage.local.get(null, (v) => {
-                chrome.storage.local.set({
-                    ...v,
-                    'update': res
-                });
-            });
-        } else {
-            chrome.storage.local.get(null, (v) => {
-                chrome.storage.local.set({
-                    ...v,
-                    'update': false
-                });
-            });
-        }
-    });
+async function getValue(k) {
+    return (await browser.storage.sync.get(k))[k];
 }
 
-update();
-
-setInterval(() => {
-    update();
-}, updateInterval);
+chrome.runtime.onMessage.addListener(
+    function(request, sender, sendResponse) {
+        if (request.message === "getValue") {
+            sendResponse(await getValue(request.key));
+        }
+    }
+);

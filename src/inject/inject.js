@@ -61,6 +61,13 @@ async function jsInject(addon, js, name) {
 	}
 }
 
+window.addEventListener("message", async (e) => {
+	console.log(e.data);
+	if(e.data.message === "getValue") {
+		e.source.postMessage({message: "getValueResponse", key: e.data.key, value: await getValue(e.data.key)}, "*");
+	}
+})
+
 cssInjectFile("darkmode", "darkmode.css", "Dark mode");
 cssInject("nocallout", `
 .callout,
@@ -110,6 +117,7 @@ cssInject("markdown", `
   }
 }
 `, "Animations");
+jsInject("autologin", "autologin.js", "Auto login");
 
 document.addEventListener('DOMContentLoaded', () => {
 	chrome.storage.local.get("update", (v) => {

@@ -13,11 +13,19 @@ async function getValue(k) {
 }
 
 function inputSave(v) {
-  setValue(v, document.querySelector("#" + v).checked);
+  if(document.querySelector("#" + v).type == "checkbox") {
+    setValue(v, document.querySelector("#" + v).checked);
+  } else {
+    setValue(v, document.querySelector("#" + v).value);
+  }
 }
 
 async function inputLoad(v) {
-  document.querySelector("#" + v).checked = await getValue(v);
+  if(document.querySelector("#" + v).type == "checkbox") {
+    document.querySelector("#" + v).checked = await getValue(v);
+  } else {
+    document.querySelector("#" + v).value = await getValue(v);
+  }
 }
 
 function save(e) {
@@ -29,6 +37,10 @@ function save(e) {
   inputSave("eqadecode");
   inputSave("keycombo");
   inputSave("markdown");
+  inputSave("autologin");
+  inputSave("autologin_host");
+  inputSave("autologin_username");
+  inputSave("autologin_password");
 }
 
 async function load() {
@@ -39,9 +51,13 @@ async function load() {
   await inputLoad("eqadecode");
   await inputLoad("keycombo");
   await inputLoad("markdown");
+  await inputLoad("autologin");
+  await inputLoad("autologin_host");
+  await inputLoad("autologin_username");
+  await inputLoad("autologin_password");
 }
 
 load();
-for(var i = 0; i < document.querySelectorAll("input[type=checkbox]").length; i++) {
-  document.querySelectorAll("input[type=checkbox]")[i].addEventListener("change", save);
+for(var i = 0; i < document.querySelectorAll("input").length; i++) {
+  document.querySelectorAll("input")[i].addEventListener("change", save);
 }
