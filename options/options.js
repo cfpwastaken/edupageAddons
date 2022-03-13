@@ -3,13 +3,13 @@
 // }
 
 function setValue(k, v) {
-  browser.storage.sync.set({
+  browser.storage.local.set({
     [k]: v
   });
 }
 
 async function getValue(k) {
-  return (await browser.storage.sync.get(k))[k];
+  return (await browser.storage.local.get(k))[k];
 }
 
 function inputSave(v) {

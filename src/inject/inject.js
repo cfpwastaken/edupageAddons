@@ -33,7 +33,7 @@ function log(str) {
 log("Loading...");
 
 async function getValue(k) {
-  return (await browser.storage.sync.get(k))[k];
+  return (await browser.storage.local.get(k))[k];
 }
 
 async function isEnabled(addon) {

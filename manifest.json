@@ -25,10 +25,5 @@
   ],
   "browser_action": {
     "default_popup": "src/popup/popup.html"
-  },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "cfp@cfp.gotdns.ch"
-    }
   }
 }
