@@ -41,6 +41,8 @@ function save(e) {
   inputSave("autologin_host");
   inputSave("autologin_username");
   inputSave("autologin_password");
+  inputSave("modernicons");
+  inputSave("pixelfix");
 }
 
 async function load() {
@@ -55,6 +57,8 @@ async function load() {
   await inputLoad("autologin_host");
   await inputLoad("autologin_username");
   await inputLoad("autologin_password");
+  await inputLoad("modernicons");
+  await inputLoad("pixelfix");
 }
 
 load();

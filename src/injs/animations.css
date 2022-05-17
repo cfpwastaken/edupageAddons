@@ -1,0 +1,14 @@
+.dialog {
+	animation-name: popIn;
+	animation-duration: 0.25s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes popIn {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}

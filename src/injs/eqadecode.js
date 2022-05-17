@@ -26,13 +26,13 @@ window.addEventListener('pushState', function(e) {
 });
 
 function decode() {
-    if(getUrlParameter("eqa") && !getUrlParameter("eqadecoded")) {
+    if(getUrlParameter("eqa")) {
         console.log("[Edupage Addons] [EQA Decode] Decoding...");
         var eqa = getUrlParameter("eqa");
         var eqa_decoded = atob(decodeURIComponent(eqa));
         console.log("[Edupage Addons] [EQA Decode] Decoded: " + eqa_decoded);
         //window.location.href = window.location.href + "&eqadecoded=true&" + eqa_decoded;
-        window.history.pushState("", "", window.location.href + "&eqadecoded=true&" + eqa_decoded);
+        window.history.pushState("", "", window.location.origin + window.location.pathname + "?" + eqa_decoded);
     }
 }
 

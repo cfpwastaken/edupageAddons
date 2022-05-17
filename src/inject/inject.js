@@ -36,6 +36,11 @@ async function getValue(k) {
   return (await browser.storage.local.get(k))[k];
 }
 
+async function dbug() {
+	console.log(await getValue("modernicons"))
+}
+dbug();
+
 async function isEnabled(addon) {
 	return (await getValue(addon)) == true;
 }
@@ -99,6 +104,7 @@ pre {
 }
 `, "Markdown CSS");
 
+cssInjectFile("markdown", "animations.css", "Animations")
 cssInject("markdown", `
 .tt-cell {
 	animation: fadein 0.5s;
@@ -118,6 +124,8 @@ cssInject("markdown", `
 }
 `, "Animations");
 jsInject("autologin", "autologin.js", "Auto login");
+jsInject("modernicons", "modernicons.js", "Modern Icons");
+cssInjectFile("pixelfix", "pixelfix.css", "Pixel Fix");
 
 document.addEventListener('DOMContentLoaded', () => {
 	chrome.storage.local.get("update", (v) => {
