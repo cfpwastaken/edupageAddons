@@ -10,11 +10,14 @@ Enhance your Edupage experience.
 * Keyboard shortcuts to navigate edupage more quickly
 * Markdown support in messages
 * Animations
+* Modern Icons
 * More to come!
 
 ## Installation
 
 ### Chrome / Edge and other Chromium based browsers
+
+Note: This may not work on Chromium right now.
 
 1. Download this repository
 2. Go to chrome://extensions
@@ -26,7 +29,7 @@ Enhance your Edupage experience.
 
 ### Firefox
 
-Firefox is not supported yet. Please use Chrome or Edge while I am working on a firefox version.
+You can either install it using about:debugging temporarily. But I recommend installing it from [AMO](https://addons.mozilla.org/en-US/firefox/addon/edupage-addons/)
 
 ## Configuration
 
