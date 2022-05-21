@@ -5,6 +5,7 @@ body {
   color: white;
   font-family: 'Roboto', sans-serif;
   margin: 0;
+  margin-bottom: 10px;
 }
 
 h2 {
@@ -17,10 +18,80 @@ label {
   font-weight: bold;
 }
 
-/*put all checkboxes to the other side*/
 input[type="checkbox"] {
-  /* float: right; */
-  transform: scale(1.5);
-  margin-right: 5px;
+  display: none;
+}
 
+#categories {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.category {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.category-title {
+  background-color: #2E2E2E;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.addons {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.addon {
+  background-color: #2E2E2E;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.addon img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.addon-selected {
+  background-color: #5f5f5f;
+}
+
+.addon-name {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.addon-name-red {
+  color: #ff4d4d;
+}
+
+.icon-new {
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -15px;
+}
+
+.close-config-container {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
 }

@@ -36,11 +36,6 @@ async function getValue(k) {
   return (await browser.storage.local.get(k))[k];
 }
 
-async function dbug() {
-	console.log(await getValue("modernicons"))
-}
-dbug();
-
 async function isEnabled(addon) {
 	return (await getValue(addon)) == true;
 }

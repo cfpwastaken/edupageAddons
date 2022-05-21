@@ -8,63 +8,105 @@
   <link rel="stylesheet" href="options.css">
 </head>
 <body>
-  <h2>Edupage Addons™</h2>
+  <h2>Edupage Addons</h2>
 
-  <div id="options">
-    <div class="option">
-      <input type="checkbox" id="darkmode" />
-      <label for="darkmode">Dark Mode</label>
-    </div>
-    <div class="option">
-      <input type="checkbox" id="nocallout" />
-      <label for="nocallout">No Callouts</label>
-    </div>
-    <div class="option">
-      <input type="checkbox" id="nostart" />
-      <label for="nostart">No Start button</label>
-    </div>
-    <div class="option">
-      <input type="checkbox" id="nohelp" />
-      <label for="nohelp">No Help</label>
-    </div>
-    <div class="option">
-      <input type="checkbox" id="eqadecode" />
-      <label for="eqadecode">Decode EQA Parameters</label>
-    </div>
-    <div class="option">
-      <input type="checkbox" id="keycombo" />
-      <label for="keycombo">Keyboard Combinations</label>
-    </div>
-    <div class="option">
-      <input type="checkbox" id="markdown" />
-      <label for="markdown">Markdown</label>
-    </div>
-    <div class="option">
-      <input type="checkbox" id="autologin" />
-      <label for="autologin">Auto Login</label>
-      <div class="optionConfig">
-        <div class="option">
-          <input type="text" id="autologin_host" placeholder="Edupage subdomain name">
+  <div id="categories">
+    <div class="category">
+      <span class="category-title">Common</span>
+      <div class="addons">
+        <div class="addon" addon-darkmode>
+          <img draggable="false" src="img/darkmode.png" class="addon-image">
+          <span class="addon-name">Dark Mode</span>
+          <input type="checkbox" id="darkmode">
         </div>
-        <div class="option">
-          <input type="text" id="autologin_username" placeholder="Edupage username">
+        <div class="addon" addon-autologin>
+          <img draggable="false" src="img/autologin.png" class="addon-image">
+          <span class="addon-name">
+            Auto login
+            <svg class="open-config" width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8.75 13.5a3.251 3.251 0 0 1 3.163 2.5h9.337a.75.75 0 0 1 .102 1.493l-.102.007h-9.337a3.251 3.251 0 0 1-6.326 0H2.75a.75.75 0 0 1-.102-1.493L2.75 16h2.837a3.251 3.251 0 0 1 3.163-2.5Zm6.5-9.5a3.251 3.251 0 0 1 3.163 2.5h2.837a.75.75 0 0 1 .102 1.493L21.25 8h-2.837a3.251 3.251 0 0 1-6.326 0H2.75a.75.75 0 0 1-.102-1.493L2.75 6.5h9.337A3.251 3.251 0 0 1 15.25 4Z" fill="#fff"/></svg>
+          </span>
+          <input type="checkbox" id="autologin">
+          <div class="addon-config" style="display: none;">
+            <div class="close-config-container">
+              <svg class="close-config" width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m4.21 4.387.083-.094a1 1 0 0 1 1.32-.083l.094.083L12 10.585l6.293-6.292a1 1 0 1 1 1.414 1.414L13.415 12l6.292 6.293a1 1 0 0 1 .083 1.32l-.083.094a1 1 0 0 1-1.32.083l-.094-.083L12 13.415l-6.293 6.292a1 1 0 0 1-1.414-1.414L10.585 12 4.293 5.707a1 1 0 0 1-.083-1.32l.083-.094-.083.094Z" fill="#fff"/></svg>
+              <span class="addon-name">Auto login</span>
+            </div>
+            <div class="option">
+              <input type="text" id="autologin_host" placeholder="Edupage subdomain name">
+            </div>
+            <div class="option">
+              <input type="text" id="autologin_username" placeholder="Edupage username">
+            </div>
+            <div class="option">
+              <input type="password" id="autologin_password" placeholder="Edupage password">
+            </div>
+          </div>
         </div>
-        <div class="option">
-          <input type="password" id="autologin_password" placeholder="Edupage password">
+        <div class="addon" addon-modernicons>
+          <img draggable="false" src="img/modernicons.png" class="addon-image">
+          <span class="addon-name">Modern Icons</span>
+          <input type="checkbox" id="modernicons">
+        </div>
+        <div class="addon" addon-pixelfix>
+          <img draggable="false" src="img/pixelfix.png" class="addon-image">
+          <span class="addon-name">
+            <svg class="icon-new" width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 4a1 1 0 0 1 1 1v8a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1ZM4 18a1 1 0 0 1 1-1h8a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1ZM7.707 6.293a1 1 0 0 0-1.414 1.414l7 7a1 1 0 0 0 1.414-1.414l-7-7Z" fill="#fff"/></svg>
+            Pixel Fix
+          </span>
+          <input type="checkbox" id="pixelfix">
         </div>
       </div>
     </div>
-    <div class="option">
-      <input type="checkbox" id="modernicons" />
-      <label for="modernicons">Modern Icons</label>
+    <div class="category">
+      <span class="category-title">Remove</span>
+      <div class="addons">
+        <div class="addon" addon-nocallout>
+          <img draggable="false" src="img/nocallouts.png" class="addon-image">
+          <span class="addon-name">No Callouts</span>
+          <input type="checkbox" id="nocallout">
+        </div>
+        <div class="addon" addon-nostart>
+          <img draggable="false" src="img/nostart.png" class="addon-image">
+          <span class="addon-name">No Start</span>
+          <input type="checkbox" id="nostart">
+        </div>
+        <div class="addon" addon-nohelp>
+          <img draggable="false" src="img/nohelp.png" class="addon-image">
+          <span class="addon-name">No Help</span>
+          <input type="checkbox" id="nohelp">
+        </div>
+      </div>
     </div>
-    <div class="option">
-      <input type="checkbox" id="pixelfix" />
-      <label for="pixelfix">Pixel Fix</label>
+    <div class="category">
+      <span class="category-title">Development</span>
+      <div class="addons">
+        <div class="addon" addon-eqadecode>
+          <img draggable="false" src="img/eqadecode.png" class="addon-image">
+          <span class="addon-name">Decode EQA</span>
+          <input type="checkbox" id="eqadecode">
+        </div>
+      </div>
+    </div>
+    <div class="category">
+      <span class="category-title">Other</span>
+      <div class="addons">
+        <div class="addon" addon-keycombo>
+          <img draggable="false" src="img/keycombo.png" class="addon-image">
+          <span class="addon-name">Keyboard Combinations</span>
+          <input type="checkbox" id="keycombo">
+        </div>
+        <div class="addon" addon-markdown>
+          <img draggable="false" src="img/markdown.png" class="addon-image">
+          <span class="addon-name addon-name-red">
+            Markdown
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2c5.523 0 10 4.478 10 10s-4.477 10-10 10S2 17.522 2 12 6.477 2 12 2Zm.002 13.004a.999.999 0 1 0 0 1.997.999.999 0 0 0 0-1.997ZM12 7a1 1 0 0 0-.993.884L11 8l.002 5.001.007.117a1 1 0 0 0 1.986 0l.007-.117L13 8l-.007-.117A1 1 0 0 0 12 7Z" fill="#ff4d4d"/></svg>
+          </span>
+          <input type="checkbox" id="markdown">
+        </div>
+      </div>
     </div>
   </div>
 
-  <code id="output"></code>
   <script src="options.js"></script>
 </body>
 </html>
