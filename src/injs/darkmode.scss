@@ -268,7 +268,8 @@ ul.edubarMenulist.level0 > li.v2:hover > a {
 .messageViewerClosePart,
 .tml-replies-actions,
 .messageRepliesTitle,
-#dlg2 {
+.ui-dialog-content,
+.ui-dialog {
     background-color: darken($dark, 5) !important;
     color: white !important;
 }
