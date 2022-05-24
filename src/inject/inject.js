@@ -13,6 +13,13 @@ function addJS(s) {
 	document.head.appendChild(script);
 }
 
+function addJSRemote(s) {
+	const script = document.createElement("script");
+	script.src = s;
+	script.classList.add("edupage-addons");
+	document.head.appendChild(script);
+}
+
 function addCSSFile(s) {
 	const style = document.createElement("link");
 	style.rel = "stylesheet";
@@ -61,6 +68,13 @@ async function jsInject(addon, js, name) {
 	}
 }
 
+async function jsInjectRemote(addon, css, name) {
+	if(await isEnabled(addon)) {
+		addJSRemote(css);
+		log("Injected " + name + " (Remote)");
+	}
+}
+
 window.addEventListener("message", async (e) => {
 	console.log(e.data);
 	if(e.data.message === "getValue") {
@@ -100,6 +114,10 @@ pre {
 `, "Markdown CSS");
 
 cssInjectFile("markdown", "animations.css", "Animations")
+jsInjectRemote("markdown", "https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js", "Markdown (Showdown lib)")
+jsInject("markdown", "xss.min.js", "Markdown (XSS)")
+jsInject("markdown", "showdown-xss-config.js", "Markdown (Showdown XSS Config)")
+jsInject("markdown", "arrive.min.js", "Markdown (Arrive lib)")
 cssInject("markdown", `
 .tt-cell {
 	animation: fadein 0.5s;
