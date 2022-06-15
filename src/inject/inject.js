@@ -103,20 +103,10 @@ cssInject("nohelp", `
 jsInject("eqadecode", "eqadecode.js", "EQA Decode");
 jsInject("keycombo", "keycombo.js", "Key combo");
 jsInject("markdown", "md.js", "Markdown");
-cssInject("markdown", `
-blockquote, blockquote > *:not(a) { color: black }
-
-blockquote { background: #fed; margin: 1em 0; padding: 8px; border-left: 2px solid #cba }
-
-pre {
-	background: #ccc;
-}
-`, "Markdown CSS");
-
 cssInjectFile("markdown", "animations.css", "Animations")
-jsInjectRemote("markdown", "https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js", "Markdown (Showdown lib)")
+jsInject("markdown", "showdown.js", "Markdown (Showdown lib)")
 jsInject("markdown", "arrive.min.js", "Markdown (Arrive lib)")
-jsInject("markdown", "xss.min.js", "Markdown (XSS)")
+jsInject("markdown", "xss.js", "Markdown (XSS)")
 setTimeout(() => {
 	jsInject("markdown", "showdown-xss-config.js", "Markdown (Showdown XSS Config)")
 }, 500);

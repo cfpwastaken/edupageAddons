@@ -1,3 +1,5 @@
+// from: https://github.com/Jackymancs4/showdown-xss-config
+
 (function(myext) {
 
   if (typeof showdown !== 'undefined') {
