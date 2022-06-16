@@ -17,19 +17,19 @@ Enhance your Edupage experience.
 
 ### Chrome / Edge and other Chromium based browsers
 
-Note: This may not work on Chromium right now.
+~~Note: This may not work on Chromium right now.~~ (this works now)
 
 1. Download this repository
-2. Go to chrome://extensions
+2. Go to about://extensions
 3. Enable Developer mode
-4. Click on the "Load unpacked extension" button
-5. Locate this folder
+4. Click on the "Load unpacked" button
+5. Locate the folder of this repo
 6. Click on the "Load" button
 7. Done!
 
 ### Firefox
 
-You can either install it using about:debugging temporarily. But I recommend installing it from [AMO](https://addons.mozilla.org/en-US/firefox/addon/edupage-addons/)
+You can install it using about:debugging temporarily. But I recommend installing it from [AMO](https://addons.mozilla.org/en-US/firefox/addon/edupage-addons/)
 
 ## Configuration
 
