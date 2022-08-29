@@ -1,0 +1,4 @@
+#!/bin/bash
+mv manifest-ff.json manifest.json
+web-ext run
+mv manifest.json manifest-ff.json

@@ -1,0 +1,4 @@
+#!/bin/bash
+mv manifest-cws.json manifest.json
+web-ext run --target=chromium
+mv manifest.json manifest-cws.json

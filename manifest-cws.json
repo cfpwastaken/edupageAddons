@@ -1,7 +1,7 @@
 {
   "name": "Edupage Addons",
-  "version": "1.4.0",
-  "manifest_version": 2,
+  "version": "1.5.0",
+  "manifest_version": 3,
   "description": "Enhance your Edupage experience",
   "default_locale": "en",
   "content_scripts": [
@@ -16,10 +16,12 @@
     }
   ],
   "permissions": ["storage"],
-  "web_accessible_resources": [
-    "src/injs/*"
-  ],
-  "browser_action": {
+	"host_permissions": ["*://*.edupage.org/*"],
+  "web_accessible_resources": [{
+    "resources": ["src/injs/*"],
+    "matches": ["*://*.edupage.org/*"]
+	}],
+  "action": {
     "default_popup": "src/popup/popup.html",
     "icons": {
       "16": "icons/icon16.png",

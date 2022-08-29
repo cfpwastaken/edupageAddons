@@ -44,6 +44,7 @@ function save() {
   inputSave("autologin_password");
   inputSave("modernicons");
   inputSave("pixelfix");
+  inputSave("modernfont");
 }
 
 async function load() {
@@ -60,6 +61,7 @@ async function load() {
   await inputLoad("autologin_password");
   await inputLoad("modernicons");
   await inputLoad("pixelfix");
+  await inputLoad("modernfont");
 }
 
 load();

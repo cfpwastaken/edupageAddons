@@ -68,13 +68,6 @@ async function jsInject(addon, js, name) {
 	}
 }
 
-async function jsInjectRemote(addon, css, name) {
-	if(await isEnabled(addon)) {
-		addJSRemote(css);
-		log("Injected " + name + " (Remote)");
-	}
-}
-
 window.addEventListener("message", async (e) => {
 	console.log(e.data);
 	if(e.data.message === "getValue") {
@@ -131,6 +124,25 @@ cssInject("markdown", `
 jsInject("autologin", "autologin.js", "Auto login");
 jsInject("modernicons", "modernicons.js", "Modern Icons");
 cssInjectFile("pixelfix", "pixelfix.css", "Pixel Fix");
+cssInject("modernfont", `
+@font-face {
+  font-family: "Roboto Round";
+  src: url("${chrome.runtime.getURL("src/injs/font/Roboto-Round-Regular.eot")}");
+  src: url("${chrome.runtime.getURL("src/injs/font/Roboto-Round-Regular.eot?#iefix")}") format("embedded-opentype"),
+		url("${chrome.runtime.getURL("src/injs/font/Roboto-Round-Regular.woff2")}") format("woff2"),
+		url("${chrome.runtime.getURL("src/injs/font/Roboto-Round-Regular.woff")}") format("woff"),
+		url("${chrome.runtime.getURL("src/injs/font/Roboto-Round-Regular.ttf")}") format("truetype"),
+		url("${chrome.runtime.getURL("src/injs/font/Roboto-Round-Regular.svg#Roboto-Round-Regular")}") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+	font-family: "Roboto Round" !important;
+	font-weight: 900 !important;
+}
+`, "Modern Font");
 
 document.addEventListener('DOMContentLoaded', () => {
 	chrome.storage.local.get("update", (v) => {
