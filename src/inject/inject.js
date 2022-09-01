@@ -95,14 +95,14 @@ cssInject("nohelp", `
 `, "No Help");
 jsInject("eqadecode", "eqadecode.js", "EQA Decode");
 jsInject("keycombo", "keycombo.js", "Key combo");
-jsInject("markdown", "md.js", "Markdown");
+// jsInject("markdown", "md.js", "Markdown");
 cssInjectFile("markdown", "animations.css", "Animations")
-jsInject("markdown", "showdown.js", "Markdown (Showdown lib)")
-jsInject("markdown", "arrive.min.js", "Markdown (Arrive lib)")
-jsInject("markdown", "xss.js", "Markdown (XSS)")
-setTimeout(() => {
-	jsInject("markdown", "showdown-xss-config.js", "Markdown (Showdown XSS Config)")
-}, 500);
+// jsInject("markdown", "showdown.js", "Markdown (Showdown lib)")
+// jsInject("markdown", "arrive.min.js", "Markdown (Arrive lib)")
+// jsInject("markdown", "xss.js", "Markdown (XSS)")
+// setTimeout(() => {
+// 	jsInject("markdown", "showdown-xss-config.js", "Markdown (Showdown XSS Config)")
+// }, 500);
 cssInject("markdown", `
 .tt-cell {
 	animation: fadein 0.5s;
