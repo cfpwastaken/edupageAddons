@@ -37,7 +37,7 @@ function save() {
   inputSave("nohelp");
   inputSave("eqadecode");
   inputSave("keycombo");
-  inputSave("markdown");
+  // inputSave("markdown");
   inputSave("autologin");
   inputSave("autologin_host");
   inputSave("autologin_username");
@@ -54,7 +54,7 @@ async function load() {
   await inputLoad("nohelp");
   await inputLoad("eqadecode");
   await inputLoad("keycombo");
-  await inputLoad("markdown");
+  // await inputLoad("markdown");
   await inputLoad("autologin");
   await inputLoad("autologin_host");
   await inputLoad("autologin_username");
