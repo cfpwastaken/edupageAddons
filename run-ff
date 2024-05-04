@@ -1,4 +1,4 @@
 #!/bin/bash
 mv manifest-ff.json manifest.json
-web-ext run
+web-ext run -f "flatpak:org.mozilla.firefox" # remove the -f flag if you dont use flatpak
 mv manifest.json manifest-ff.json

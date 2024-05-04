@@ -190,7 +190,18 @@ html,
 div.mvtMainScroller.replies > div.messageViewerReplies.messageViewerReplies0 > ul > li > div.messageReakciaInner,
 .edubarHeader,
 .edubarProfilebox .display,
-.profilemenu {
+.profilemenu,
+.noticeboardItems-inner,
+.noticeboardMain,
+.etest-screen,
+.etest-player-header-inner,
+.messageViewerReplies,
+.tml-viewerRepliesBox,
+.tml-reply-box-outer-b,
+.tml-reply-box-b,
+.reactPopup,
+.reactPopup > div > div,
+.edubarMainNoSkin > div > div:has(.SubstViewDateSwitcher) {
   background-color: $dark !important;
   color: white !important;
 }
@@ -219,7 +230,8 @@ td > div > a,
 #fitheight > div:nth-child(2) > div:nth-child(3),
 .messageViewerReplyText,
 .messageViewerConfirmationsHeader,
-.tmv-userCardsList {
+.tmv-userCardsList,
+.messageViewerTextMinH {
     background-color: darken($dark, 5) !important;
 }
 
@@ -247,7 +259,12 @@ td > div > a,
 .etest-meditor-tests-obdobie-combo,
 .etest-meditor-test-list-tabs,
 .etest-meditor-content,
-.etest-meditor-search-results-toolbar {
+.etest-meditor-search-results-toolbar,
+.etest-screen-inner,
+.etest-question-content,
+.etest-title,
+.etest-studentVysledky-znamkaPridelenie-znamka,
+textarea {
     background-color: darken($dark, 2) !important;
     color: white !important;
 }
@@ -318,4 +335,22 @@ td {
 .tt-cell,
 .tt-cell + div + div + div span {
 	filter: brightness(80%);
+}
+
+.noticeboardItem div {
+	color: black !important;
+}
+
+.flat-button-gray,
+.tml-reply-box-txt-b,
+.tml-reply-box-txt-b textarea,
+.switcher > .cell.selected,
+.edubarMainNoSkin > div > div:has(.SubstViewDateSwitcher) > div:nth-child(4) > span:nth-child(1) {
+	background-color: lighten($dark, 5) !important;
+	color: white !important;
+}
+
+.section.print-nobreak,
+.section.print-nobreak .header {
+	border-color: lighten($dark, 15) !important;
 }

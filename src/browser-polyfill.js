@@ -1,6 +1,3 @@
-// from webextension-polyfill npm package
-// github: https://github.com/mozilla/webextension-polyfill
-
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
     define("webextension-polyfill", ["module"], factory);
